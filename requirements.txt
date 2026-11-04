@@ -1,0 +1,12 @@
+torch
+huggingface_hub
+transformers
+sentence_transformers
+streamlit
+numpy
+python-dotenv
+google-generativeai
+pandas
+scikit-learn
+torchvision
+spacy
