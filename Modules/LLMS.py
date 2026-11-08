@@ -6,7 +6,7 @@ load_dotenv()
 
 genai.configure(api_key = os.getenv("GEMINI_API_KEY"))
 
-gemini_model = (genai.GenerativeModel("gemini-2.5-flash"))
+gemini_model = (genai.GenerativeModel("gemini-3.8-flash"))
 
 
 def load_prompt():
@@ -21,8 +21,7 @@ prompt_template = (load_prompt())
 def ask_gemini(question, context):
     prompt = prompt_template.format(context=context ,question = question)
 
-    response = (gemini_model.generate_context(
-        prompt = prompt
+    response = (gemini_model.generate_content( prompt
     ) )
 
 

@@ -28,10 +28,10 @@ def build_vector_database(chuncks):
 
 
 
-def rwtrive_context(question , collection):
+def retrieve_context(question , collection):
     question_embedding = embedding_model.encode([question])
     results = collection.query(
-        query_embeddings = [question_embedding.tolist()],
+        query_embeddings = question_embedding.tolist(),
         n_results = 3
     )
 
