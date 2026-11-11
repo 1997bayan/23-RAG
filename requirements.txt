@@ -11,3 +11,10 @@ scikit-learn
 torchvision
 spacy
 pypdf
+chromdb
+langchain==0.2.17
+langchain-community==0.2.19
+langchain-google-genai
+langchain-huggingface
+ollama
+langchain-ollama
