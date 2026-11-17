@@ -4,6 +4,8 @@ from dotenv import load_dotenv
 
 from langchain_google_genai import ChatGoogleGenerativeAI
 load_dotenv()
+import ollama
+from langchain_ollama import ChatOllama
 
 #genai.configure(api_key = os.getenv("GEMINI_API_KEY"))
 
@@ -28,7 +30,10 @@ load_dotenv()
 
 #     return response.text
 
+# def load_llm():
+#     llm = ChatGoogleGenerativeAI(model="gemini-3.8-flash",api_key=os.getenv("GEMINI_API_KEY"),
+#                                  temperature=0.2,max_output_tokens=512)
+#     return llm
+
 def load_llm():
-    llm = ChatGoogleGenerativeAI(model="gemini-3.8-flash",api_key=os.getenv("GEMINI_API_KEY"),
-                                 temperature=0.2,max_output_tokens=512)
-    return llm
+    return ChatOllama(model="llama3")

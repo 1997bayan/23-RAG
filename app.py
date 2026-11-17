@@ -31,5 +31,6 @@ if pdf is not None:
                 st.subheader("retrieved documents")
                 for i , doc in enumerate(docs):
                     st.write(f"Document {i+1}: {doc.page_content}")
+                    
                 answer = qa_chain.run(question)
                 st.write(answer)
